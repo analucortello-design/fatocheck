@@ -2,127 +2,130 @@
 <html lang="pt-br">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Quiz - FatoCheck!</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+rel="stylesheet">
 
 <style>
 
 :root{
---roxo:#7c3aed;
---roxo-escuro:#4c1d95;
---roxo-claro:#ede9fe;
+    --roxo:#7c3aed;
+    --roxo-escuro:#4c1d95;
+    --roxo-claro:#ede9fe;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Poppins;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins;
 }
 
 body{
-background:var(--roxo-claro);
-padding:30px;
-text-align:center;
+    background:var(--roxo-claro);
+    padding:30px;
+    text-align:center;
 }
 
 .quiz-container{
-max-width:800px;
-margin:auto;
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.1);
-animation:surgir 0.8s ease;
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    animation:surgir 0.8s ease;
 }
 
 @keyframes surgir{
 
 from{
-opacity:0;
-transform:translateY(30px);
+    opacity:0;
+    transform:translateY(30px);
 }
 
 to{
-opacity:1;
-transform:translateY(0);
+    opacity:1;
+    transform:translateY(0);
 }
 
 }
 
 h1{
-color:var(--roxo);
-margin-bottom:10px;
+    color:var(--roxo);
+    margin-bottom:10px;
 }
 
 .subtitulo{
-margin-bottom:30px;
-color:#555;
+    margin-bottom:30px;
+    color:#555;
 }
 
 .pergunta{
-margin-bottom:30px;
-text-align:left;
+    margin-bottom:30px;
+    text-align:left;
 }
 
 .pergunta h3{
-margin-bottom:15px;
-color:var(--roxo-escuro);
+    margin-bottom:15px;
+    color:var(--roxo-escuro);
 }
 
 label{
-display:block;
-background:#f5f3ff;
-padding:12px;
-border-radius:10px;
-margin-bottom:10px;
-cursor:pointer;
-transition:0.3s;
+    display:block;
+    background:#f5f3ff;
+    padding:12px;
+    border-radius:10px;
+    margin-bottom:10px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 label:hover{
-background:#ddd6fe;
-transform:scale(1.01);
+    background:#ddd6fe;
+    transform:scale(1.01);
 }
 
 input[type="radio"]{
-margin-right:10px;
+    margin-right:10px;
 }
 
 button{
-background:var(--roxo);
-color:white;
-border:none;
-padding:15px 35px;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
-transition:0.3s;
+    background:var(--roxo);
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
 }
 
 button:hover{
-background:var(--roxo-escuro);
-transform:scale(1.05);
+    background:var(--roxo-escuro);
+    transform:scale(1.05);
 }
 
 #resultado{
-margin-top:30px;
-font-size:20px;
-font-weight:bold;
+    margin-top:30px;
+    font-size:20px;
+    font-weight:bold;
 }
 
 .voltar{
-display:inline-block;
-margin-top:25px;
-text-decoration:none;
-color:var(--roxo);
-font-weight:bold;
+    display:inline-block;
+    margin-top:25px;
+    text-decoration:none;
+    color:var(--roxo);
+    font-weight:bold;
+}
+
+.voltar:hover{
+    color:var(--roxo-escuro);
 }
 
 </style>
@@ -147,27 +150,27 @@ Teste seus conhecimentos sobre desinformação na internet.
 <div class="pergunta">
 
 <h3>
-1. Qual prática reduz melhor o risco de cair em uma notícia falsa?
+1. Uma postagem apresenta um gráfico aparentemente científico para sustentar uma afirmação. Qual procedimento é mais adequado antes de aceitar a conclusão?
 </h3>
 
 <label>
+<input type="radio" name="q1" value="errado">
+Verificar apenas se o gráfico possui muitas cores e números.
+</label>
+
+<label>
 <input type="radio" name="q1" value="certo">
-Conferir a fonte original.
+Identificar a fonte dos dados, a metodologia e o contexto em que foram produzidos.
 </label>
 
 <label>
 <input type="radio" name="q1" value="errado">
-Ler apenas o título.
+Considerar a informação verdadeira porque foi apresentada em forma de gráfico.
 </label>
 
 <label>
 <input type="radio" name="q1" value="errado">
-Confiar nos comentários.
-</label>
-
-<label>
-<input type="radio" name="q1" value="errado">
-Verificar o número de curtidas.
+Verificar quantas pessoas compartilharam a publicação.
 </label>
 
 </div>
@@ -178,27 +181,27 @@ Verificar o número de curtidas.
 <div class="pergunta">
 
 <h3>
-2. Uma foto real é usada com uma legenda falsa. O problema é:
+2. Uma notícia cita corretamente uma pesquisa, mas utiliza o resultado de um grupo específico para fazer uma afirmação sobre toda a população. Qual problema pode existir?
 </h3>
 
 <label>
 <input type="radio" name="q2" value="errado">
-Falsificação da imagem.
+Erro ortográfico.
+</label>
+
+<label>
+<input type="radio" name="q2" value="errado">
+Manipulação obrigatória da imagem.
 </label>
 
 <label>
 <input type="radio" name="q2" value="certo">
-Descontextualização.
+Generalização indevida dos resultados.
 </label>
 
 <label>
 <input type="radio" name="q2" value="errado">
-Erro de resolução.
-</label>
-
-<label>
-<input type="radio" name="q2" value="errado">
-Plágio.
+Plágio da pesquisa.
 </label>
 
 </div>
@@ -209,27 +212,27 @@ Plágio.
 <div class="pergunta">
 
 <h3>
-3. Qual sinal NÃO comprova a credibilidade de uma notícia?
+3. Você encontra uma afirmação muito compartilhada e percebe que várias páginas estão repetindo exatamente o mesmo texto. O que isso NÃO permite concluir?
 </h3>
 
 <label>
 <input type="radio" name="q3" value="errado">
-Autoria identificada.
-</label>
-
-<label>
-<input type="radio" name="q3" value="errado">
-Fontes verificáveis.
+Que a informação se espalhou por diferentes páginas.
 </label>
 
 <label>
 <input type="radio" name="q3" value="certo">
-Muitos compartilhamentos.
+Que a informação é verdadeira apenas porque aparece em vários lugares.
 </label>
 
 <label>
 <input type="radio" name="q3" value="errado">
-Data informada.
+Que pode existir uma fonte original que deve ser investigada.
+</label>
+
+<label>
+<input type="radio" name="q3" value="errado">
+Que as páginas podem estar reproduzindo uma mesma informação.
 </label>
 
 </div>
@@ -240,27 +243,27 @@ Data informada.
 <div class="pergunta">
 
 <h3>
-4. Um domínio imita o de um jornal conhecido. Isso pode indicar:
+4. Uma publicação afirma que um determinado medicamento "funciona em 95% dos casos", mas não informa quem realizou o estudo nem apresenta a pesquisa. Qual é a principal razão para desconfiar da afirmação?
 </h3>
 
 <label>
 <input type="radio" name="q4" value="errado">
-Fonte primária.
+O número 95% é sempre impossível.
+</label>
+
+<label>
+<input type="radio" name="q4" value="errado">
+Todo conteúdo sobre medicamentos é necessariamente falso.
 </label>
 
 <label>
 <input type="radio" name="q4" value="certo">
-Site clonado ou enganoso.
+Não há evidências verificáveis suficientes para avaliar a afirmação.
 </label>
 
 <label>
 <input type="radio" name="q4" value="errado">
-Atualização automática.
-</label>
-
-<label>
-<input type="radio" name="q4" value="errado">
-Conteúdo oficial.
+Uma porcentagem nunca pode ser utilizada em pesquisas.
 </label>
 
 </div>
@@ -271,27 +274,27 @@ Conteúdo oficial.
 <div class="pergunta">
 
 <h3>
-5. Uma manchete é verdadeira, mas omite um dado decisivo. O risco principal é:
+5. Uma imagem mostra uma grande multidão e uma legenda afirma que ela participou de um protesto ocorrido ontem. Qual verificação pode ser especialmente importante?
 </h3>
 
 <label>
+<input type="radio" name="q5" value="errado">
+Verificar somente a qualidade da imagem.
+</label>
+
+<label>
 <input type="radio" name="q5" value="certo">
-Contextualização incompleta.
+Investigar a origem da imagem e comparar data, local e contexto.
 </label>
 
 <label>
 <input type="radio" name="q5" value="errado">
-Erro gramatical.
+Contar quantas pessoas aparecem na fotografia.
 </label>
 
 <label>
 <input type="radio" name="q5" value="errado">
-Fonte anônima.
-</label>
-
-<label>
-<input type="radio" name="q5" value="errado">
-Satirização.
+Considerar a legenda verdadeira porque a imagem parece real.
 </label>
 
 </div>
@@ -302,27 +305,27 @@ Satirização.
 <div class="pergunta">
 
 <h3>
-6. Ao encontrar um estudo citado em uma postagem, qual é a melhor checagem?
+6. Uma matéria apresenta uma declaração de uma pessoa como prova definitiva de determinado fato. Qual análise é mais adequada?
 </h3>
 
 <label>
+<input type="radio" name="q6" value="errado">
+Aceitar a declaração porque toda pessoa entrevistada é uma fonte imparcial.
+</label>
+
+<label>
+<input type="radio" name="q6" value="errado">
+Descartar automaticamente a declaração.
+</label>
+
+<label>
 <input type="radio" name="q6" value="certo">
-Ler o estudo original.
+Verificar quem fez a declaração, qual é sua relação com o assunto e se existem outras evidências.
 </label>
 
 <label>
 <input type="radio" name="q6" value="errado">
-Confiar no resumo.
-</label>
-
-<label>
-<input type="radio" name="q6" value="errado">
-Ver os comentários.
-</label>
-
-<label>
-<input type="radio" name="q6" value="errado">
-Contar compartilhamentos.
+Considerar verdadeira qualquer afirmação feita por uma pessoa conhecida.
 </label>
 
 </div>
@@ -333,27 +336,27 @@ Contar compartilhamentos.
 <div class="pergunta">
 
 <h3>
-7. Um vídeo antigo é apresentado como atual. O erro está no:
+7. Uma postagem apresenta uma estatística verdadeira, mas escolhe apenas o período em que o resultado foi mais favorável para defender uma conclusão. Qual problema pode estar presente?
 </h3>
 
 <label>
 <input type="radio" name="q7" value="errado">
-Formato.
+A estatística deixa automaticamente de ser verdadeira.
 </label>
 
 <label>
 <input type="radio" name="q7" value="certo">
-Contexto temporal.
+Seleção tendenciosa do recorte dos dados.
 </label>
 
 <label>
 <input type="radio" name="q7" value="errado">
-Tamanho.
+Erro de tradução.
 </label>
 
 <label>
 <input type="radio" name="q7" value="errado">
-Áudio.
+Falsificação obrigatória dos dados.
 </label>
 
 </div>
@@ -364,27 +367,27 @@ Tamanho.
 <div class="pergunta">
 
 <h3>
-8. Uma pesquisa diz "90% aprovam", mas não informa a amostra. O dado é:
+8. Um site publica uma notícia e coloca no final um link para uma pesquisa. Ao abrir o link, você percebe que a pesquisa não apresenta os dados citados na matéria. Qual atitude é mais adequada?
 </h3>
 
 <label>
 <input type="radio" name="q8" value="errado">
-Comprovado.
+Confiar na matéria porque existe um link.
 </label>
 
 <label>
 <input type="radio" name="q8" value="errado">
-Inútil em qualquer situação.
+Ignorar a diferença entre a pesquisa e a notícia.
 </label>
 
 <label>
 <input type="radio" name="q8" value="certo">
-Insuficiente para avaliação.
+Comparar o conteúdo original da pesquisa com a forma como a notícia apresentou seus resultados.
 </label>
 
 <label>
 <input type="radio" name="q8" value="errado">
-Necessariamente falso.
+Considerar a pesquisa falsa automaticamente.
 </label>
 
 </div>
@@ -395,27 +398,27 @@ Necessariamente falso.
 <div class="pergunta">
 
 <h3>
-9. Buscar apenas evidências que confirmam sua opinião é:
+9. Uma pessoa procura apenas sites que concordam com sua opinião e ignora fontes que apresentam evidências contrárias. Esse comportamento dificulta a verificação porque:
 </h3>
 
 <label>
+<input type="radio" name="q9" value="errado">
+Todas as fontes da internet são obrigatoriamente iguais.
+</label>
+
+<label>
 <input type="radio" name="q9" value="certo">
-Viés de confirmação.
+Pode reforçar o viés de confirmação e impedir uma análise das evidências contrárias.
 </label>
 
 <label>
 <input type="radio" name="q9" value="errado">
-Método científico.
+Fontes diferentes nunca podem apresentar informações verdadeiras.
 </label>
 
 <label>
 <input type="radio" name="q9" value="errado">
-Checagem cruzada.
-</label>
-
-<label>
-<input type="radio" name="q9" value="errado">
-Fonte primária.
+Pesquisar opiniões diferentes torna qualquer informação falsa.
 </label>
 
 </div>
@@ -426,27 +429,27 @@ Fonte primária.
 <div class="pergunta">
 
 <h3>
-10. Uma imagem gerada por IA é apresentada como fotografia real. O ponto central é verificar:
+10. Um vídeo mostra um acontecimento real, mas não informa quando nem onde foi gravado. Qual conclusão é mais segura?
 </h3>
 
 <label>
 <input type="radio" name="q10" value="errado">
-Quantidade de curtidas.
+O acontecimento ocorreu exatamente como a legenda afirma.
+</label>
+
+<label>
+<input type="radio" name="q10" value="errado">
+Vídeos sem data são sempre falsos.
 </label>
 
 <label>
 <input type="radio" name="q10" value="certo">
-Origem e contexto.
+A autenticidade do vídeo não garante que sua legenda ou contexto estejam corretos.
 </label>
 
 <label>
 <input type="radio" name="q10" value="errado">
-Tamanho do arquivo.
-</label>
-
-<label>
-<input type="radio" name="q10" value="errado">
-Número de comentários.
+Se o vídeo for real, todas as informações associadas a ele também serão reais.
 </label>
 
 </div>
@@ -457,27 +460,27 @@ Número de comentários.
 <div class="pergunta">
 
 <h3>
-11. Duas fontes confiáveis divergem sobre um fato. O procedimento adequado é:
+11. Uma notícia apresenta duas informações verdadeiras, mas usa essas informações para sugerir uma relação de causa e efeito que não foi demonstrada. Qual erro de interpretação pode estar ocorrendo?
 </h3>
 
 <label>
 <input type="radio" name="q11" value="errado">
-Escolher a mais compartilhada.
+A informação verdadeira deixa automaticamente de existir.
+</label>
+
+<label>
+<input type="radio" name="q11" value="errado">
+Erro de ortografia.
 </label>
 
 <label>
 <input type="radio" name="q11" value="certo">
-Comparar evidências e fontes.
+Confundir correlação ou associação com causalidade.
 </label>
 
 <label>
 <input type="radio" name="q11" value="errado">
-Escolher a que concorda com você.
-</label>
-
-<label>
-<input type="radio" name="q11" value="errado">
-Descartar as duas.
+Uso obrigatório de uma fonte falsa.
 </label>
 
 </div>
@@ -488,27 +491,27 @@ Descartar as duas.
 <div class="pergunta">
 
 <h3>
-12. Uma publicação usa "especialistas dizem", mas não identifica nenhum. Isso:
+12. Uma página usa o nome, as cores e o logotipo de uma organização conhecida, mas o endereço do site é diferente do oficial. Qual verificação é mais relevante?
 </h3>
 
 <label>
 <input type="radio" name="q12" value="errado">
-Prova a afirmação.
+Verificar apenas se o logotipo é parecido.
 </label>
 
 <label>
 <input type="radio" name="q12" value="certo">
-Exige verificação da fonte.
+Comparar o domínio e o conteúdo com os canais oficiais da organização.
 </label>
 
 <label>
 <input type="radio" name="q12" value="errado">
-Torna o texto satírico.
+Considerar o site oficial porque utiliza o mesmo logotipo.
 </label>
 
 <label>
 <input type="radio" name="q12" value="errado">
-Confirma a pesquisa.
+Verificar somente o número de seguidores da página.
 </label>
 
 </div>
@@ -519,27 +522,27 @@ Confirma a pesquisa.
 <div class="pergunta">
 
 <h3>
-13. Qual elemento ajuda a detectar uma notícia antiga reapresentada como atual?
+13. Uma publicação afirma que "nenhum especialista discorda" de determinada ideia, mas não identifica os especialistas nem apresenta fontes. Qual problema existe nessa afirmação?
 </h3>
 
 <label>
+<input type="radio" name="q13" value="errado">
+A ausência de comentários comprova a afirmação.
+</label>
+
+<label>
+<input type="radio" name="q13" value="errado">
+A frase é verdadeira porque utiliza a palavra "especialista".
+</label>
+
+<label>
 <input type="radio" name="q13" value="certo">
-Data da publicação.
+A afirmação não pode ser verificada adequadamente sem identificar as fontes e as evidências utilizadas.
 </label>
 
 <label>
 <input type="radio" name="q13" value="errado">
-Quantidade de emojis.
-</label>
-
-<label>
-<input type="radio" name="q13" value="errado">
-Número de imagens.
-</label>
-
-<label>
-<input type="radio" name="q13" value="errado">
-Tamanho da manchete.
+Toda opinião de especialista é necessariamente falsa.
 </label>
 
 </div>
@@ -550,27 +553,27 @@ Tamanho da manchete.
 <div class="pergunta">
 
 <h3>
-14. Uma afirmação extraordinária não apresenta evidências verificáveis. A atitude mais adequada é:
+14. Uma notícia verdadeira de 2021 volta a circular em 2026 acompanhada da frase "isso aconteceu hoje". Qual é o principal problema?
 </h3>
 
 <label>
 <input type="radio" name="q14" value="errado">
-Compartilhar rapidamente.
+A notícia deixa de ser verdadeira por ser antiga.
 </label>
 
 <label>
 <input type="radio" name="q14" value="errado">
-Tratá-la como confirmada.
+A existência da notícia original prova que a nova legenda está correta.
 </label>
 
 <label>
 <input type="radio" name="q14" value="certo">
-Buscar evidências independentes.
+Uma informação verdadeira pode ser usada de forma enganosa quando seu contexto temporal é alterado.
 </label>
 
 <label>
 <input type="radio" name="q14" value="errado">
-Confiar na popularidade.
+Toda notícia antiga deve ser considerada falsa.
 </label>
 
 </div>
@@ -581,27 +584,27 @@ Confiar na popularidade.
 <div class="pergunta">
 
 <h3>
-15. Qual combinação representa uma checagem mais completa?
+15. Você precisa verificar uma afirmação viral que apresenta texto, imagem, estatísticas e uma suposta declaração de especialista. Qual estratégia oferece uma checagem mais completa?
 </h3>
 
 <label>
 <input type="radio" name="q15" value="errado">
-Título + curtidas.
+Verificar apenas se a publicação possui muitos compartilhamentos.
+</label>
+
+<label>
+<input type="radio" name="q15" value="errado">
+Procurar uma única página que concorde com a afirmação.
+</label>
+
+<label>
+<input type="radio" name="q15" value="errado">
+Analisar somente a imagem porque ela é o elemento mais chamativo.
 </label>
 
 <label>
 <input type="radio" name="q15" value="certo">
-Fonte + data + contexto + evidências.
-</label>
-
-<label>
-<input type="radio" name="q15" value="errado">
-Imagem + comentários.
-</label>
-
-<label>
-<input type="radio" name="q15" value="errado">
-Opinião + compartilhamentos.
+Verificar a fonte original, datas, contexto, evidências, dados, imagem e a identidade das fontes citadas.
 </label>
 
 </div>
@@ -637,8 +640,8 @@ const SUPABASE_KEY =
 
 const clienteSupabase =
 window.supabase.createClient(
-SUPABASE_URL,
-SUPABASE_KEY
+    SUPABASE_URL,
+    SUPABASE_KEY
 );
 
 
@@ -646,146 +649,139 @@ SUPABASE_KEY
 
 async function verificarLogin(){
 
-const { data: { session } } =
-await clienteSupabase.auth.getSession();
+    const { data: { session } } =
+    await clienteSupabase.auth.getSession();
 
-if(!session){
+    if(!session){
 
-window.location.href =
-"login.html?origem=quiz";
+        window.location.href =
+        "login.html?origem=quiz";
 
-}
+    }
 
 }
 
 verificarLogin();
 
-</script>
 
-
-<!-- RESULTADO E SALVAMENTO -->
-
-<script>
+// RESULTADO E SALVAMENTO
 
 document
 .getElementById("quizForm")
 .addEventListener("submit", async function(e){
 
-e.preventDefault();
+    e.preventDefault();
 
-const totalPerguntas = 15;
+    const totalPerguntas = 15;
 
-const respostas =
-document.querySelectorAll(
-'input[type="radio"]:checked'
-);
-
-
-if(respostas.length < totalPerguntas){
-
-document.getElementById("resultado").innerHTML = `
-<div>⚠️ Responda todas as perguntas antes de finalizar.</div>
-`;
-
-return;
-
-}
+    const respostas =
+    document.querySelectorAll(
+        'input[type="radio"]:checked'
+    );
 
 
-const { data: { user }, error: erroUsuario } =
-await clienteSupabase.auth.getUser();
+    if(respostas.length < totalPerguntas){
+
+        document.getElementById("resultado").innerHTML = `
+            <div>⚠️ Responda todas as perguntas antes de finalizar.</div>
+        `;
+
+        return;
+
+    }
 
 
-if(erroUsuario || !user){
-
-document.getElementById("resultado").innerHTML = `
-<div>⚠️ Você precisa estar logado.</div>
-`;
-
-return;
-
-}
+    const { data: { user }, error: erroUsuario } =
+    await clienteSupabase.auth.getUser();
 
 
-let pontos = 0;
+    if(erroUsuario || !user){
 
-const respostasParaSalvar = [];
+        document.getElementById("resultado").innerHTML = `
+            <div>⚠️ Você precisa estar logado.</div>
+        `;
 
+        return;
 
-respostas.forEach((resposta) => {
-
-const perguntaId =
-Number(resposta.name.replace("q", ""));
-
-const acertou =
-resposta.value === "certo";
+    }
 
 
-if(acertou){
+    let pontos = 0;
 
-pontos++;
-
-}
+    const respostasParaSalvar = [];
 
 
-respostasParaSalvar.push({
+    respostas.forEach((resposta) => {
 
-user_id: user.id,
+        const perguntaId =
+        Number(resposta.name.replace("q", ""));
 
-pergunta_id: perguntaId,
-
-resposta: resposta.value,
-
-acertou: acertou
-
-});
-
-});
+        const acertou =
+        resposta.value === "certo";
 
 
-const { error } =
-await clienteSupabase
-.from("respostas")
-.insert(respostasParaSalvar);
+        if(acertou){
+            pontos++;
+        }
 
 
-if(error){
+        respostasParaSalvar.push({
 
-console.error("Erro ao salvar:", error);
+            user_id: user.id,
 
-document.getElementById("resultado").innerHTML = `
-<div>❌ Erro ao salvar suas respostas.</div>
-`;
+            pergunta_id: perguntaId,
 
-return;
+            resposta: resposta.value,
 
-}
+            acertou: acertou
 
+        });
 
-const erros =
-totalPerguntas - pontos;
+    });
 
 
-const percentual =
-Math.round(
-(pontos / totalPerguntas) * 100
-);
+    const { error } =
+    await clienteSupabase
+    .from("respostas")
+    .insert(respostasParaSalvar);
 
 
-document.getElementById("resultado").innerHTML = `
+    if(error){
 
-<div>✅ Acertos: ${pontos}</div>
+        console.error("Erro ao salvar:", error);
 
-<div>❌ Erros: ${erros}</div>
+        document.getElementById("resultado").innerHTML = `
+            <div>❌ Erro ao salvar suas respostas.</div>
+        `;
 
-<div>📊 Aproveitamento: ${percentual}%</div>
+        return;
 
-`;
+    }
+
+
+    const erros =
+    totalPerguntas - pontos;
+
+
+    const percentual =
+    Math.round(
+        (pontos / totalPerguntas) * 100
+    );
+
+
+    document.getElementById("resultado").innerHTML = `
+
+        <div>✅ Acertos: ${pontos}</div>
+
+        <div>❌ Erros: ${erros}</div>
+
+        <div>📊 Aproveitamento: ${percentual}%</div>
+
+    `;
 
 });
 
 </script>
 
 </body>
-
 </html>
