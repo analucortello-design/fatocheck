@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Quiz - FatoCheck!</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--roxo:#7c3aed;
+--roxo-escuro:#4c1d95;
+--roxo-claro:#ede9fe;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins;
+}
+
+body{
+background:var(--roxo-claro);
+padding:30px;
+text-align:center;
+}
+
+.quiz-container{
+max-width:800px;
+margin:auto;
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+animation:surgir 0.8s ease;
+}
+
+@keyframes surgir{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+h1{
+color:var(--roxo);
+margin-bottom:10px;
+}
+
+.subtitulo{
+margin-bottom:30px;
+color:#555;
+}
+
+.pergunta{
+margin-bottom:30px;
+text-align:left;
+}
+
+.pergunta h3{
+margin-bottom:15px;
+color:var(--roxo-escuro);
+}
+
+label{
+display:block;
+background:#f5f3ff;
+padding:12px;
+border-radius:10px;
+margin-bottom:10px;
+cursor:pointer;
+transition:0.3s;
+}
+
+label:hover{
+background:#ddd6fe;
+transform:scale(1.01);
+}
+
+input[type="radio"]{
+margin-right:10px;
+}
+
+button{
+background:var(--roxo);
+color:white;
+border:none;
+padding:15px 35px;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:var(--roxo-escuro);
+transform:scale(1.05);
+}
+
+#resultado{
+margin-top:30px;
+font-size:20px;
+font-weight:bold;
+}
+
+.voltar{
+display:inline-block;
+margin-top:25px;
+text-decoration:none;
+color:var(--roxo);
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+<h1>🧠 Quiz sobre Fake News</h1>
+
+<p class="subtitulo">
+Teste seus conhecimentos sobre desinformação na internet.
+</p>
+
+<form id="quizForm">
+
+
+<!-- PERGUNTA 1 -->
+
+<div class="pergunta">
+
+<h3>
+1. Qual prática reduz melhor o risco de cair em uma notícia falsa?
+</h3>
+
+<label>
+<input type="radio" name="q1" value="certo">
+Conferir a fonte original.
+</label>
+
+<label>
+<input type="radio" name="q1" value="errado">
+Ler apenas o título.
+</label>
+
+<label>
+<input type="radio" name="q1" value="errado">
+Confiar nos comentários.
+</label>
+
+<label>
+<input type="radio" name="q1" value="errado">
+Verificar o número de curtidas.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 2 -->
+
+<div class="pergunta">
+
+<h3>
+2. Uma foto real é usada com uma legenda falsa. O problema é:
+</h3>
+
+<label>
+<input type="radio" name="q2" value="errado">
+Falsificação da imagem.
+</label>
+
+<label>
+<input type="radio" name="q2" value="certo">
+Descontextualização.
+</label>
+
+<label>
+<input type="radio" name="q2" value="errado">
+Erro de resolução.
+</label>
+
+<label>
+<input type="radio" name="q2" value="errado">
+Plágio.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 3 -->
+
+<div class="pergunta">
+
+<h3>
+3. Qual sinal NÃO comprova a credibilidade de uma notícia?
+</h3>
+
+<label>
+<input type="radio" name="q3" value="errado">
+Autoria identificada.
+</label>
+
+<label>
+<input type="radio" name="q3" value="errado">
+Fontes verificáveis.
+</label>
+
+<label>
+<input type="radio" name="q3" value="certo">
+Muitos compartilhamentos.
+</label>
+
+<label>
+<input type="radio" name="q3" value="errado">
+Data informada.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 4 -->
+
+<div class="pergunta">
+
+<h3>
+4. Um domínio imita o de um jornal conhecido. Isso pode indicar:
+</h3>
+
+<label>
+<input type="radio" name="q4" value="errado">
+Fonte primária.
+</label>
+
+<label>
+<input type="radio" name="q4" value="certo">
+Site clonado ou enganoso.
+</label>
+
+<label>
+<input type="radio" name="q4" value="errado">
+Atualização automática.
+</label>
+
+<label>
+<input type="radio" name="q4" value="errado">
+Conteúdo oficial.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 5 -->
+
+<div class="pergunta">
+
+<h3>
+5. Uma manchete é verdadeira, mas omite um dado decisivo. O risco principal é:
+</h3>
+
+<label>
+<input type="radio" name="q5" value="certo">
+Contextualização incompleta.
+</label>
+
+<label>
+<input type="radio" name="q5" value="errado">
+Erro gramatical.
+</label>
+
+<label>
+<input type="radio" name="q5" value="errado">
+Fonte anônima.
+</label>
+
+<label>
+<input type="radio" name="q5" value="errado">
+Satirização.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 6 -->
+
+<div class="pergunta">
+
+<h3>
+6. Ao encontrar um estudo citado em uma postagem, qual é a melhor checagem?
+</h3>
+
+<label>
+<input type="radio" name="q6" value="certo">
+Ler o estudo original.
+</label>
+
+<label>
+<input type="radio" name="q6" value="errado">
+Confiar no resumo.
+</label>
+
+<label>
+<input type="radio" name="q6" value="errado">
+Ver os comentários.
+</label>
+
+<label>
+<input type="radio" name="q6" value="errado">
+Contar compartilhamentos.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 7 -->
+
+<div class="pergunta">
+
+<h3>
+7. Um vídeo antigo é apresentado como atual. O erro está no:
+</h3>
+
+<label>
+<input type="radio" name="q7" value="errado">
+Formato.
+</label>
+
+<label>
+<input type="radio" name="q7" value="certo">
+Contexto temporal.
+</label>
+
+<label>
+<input type="radio" name="q7" value="errado">
+Tamanho.
+</label>
+
+<label>
+<input type="radio" name="q7" value="errado">
+Áudio.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 8 -->
+
+<div class="pergunta">
+
+<h3>
+8. Uma pesquisa diz "90% aprovam", mas não informa a amostra. O dado é:
+</h3>
+
+<label>
+<input type="radio" name="q8" value="errado">
+Comprovado.
+</label>
+
+<label>
+<input type="radio" name="q8" value="errado">
+Inútil em qualquer situação.
+</label>
+
+<label>
+<input type="radio" name="q8" value="certo">
+Insuficiente para avaliação.
+</label>
+
+<label>
+<input type="radio" name="q8" value="errado">
+Necessariamente falso.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 9 -->
+
+<div class="pergunta">
+
+<h3>
+9. Buscar apenas evidências que confirmam sua opinião é:
+</h3>
+
+<label>
+<input type="radio" name="q9" value="certo">
+Viés de confirmação.
+</label>
+
+<label>
+<input type="radio" name="q9" value="errado">
+Método científico.
+</label>
+
+<label>
+<input type="radio" name="q9" value="errado">
+Checagem cruzada.
+</label>
+
+<label>
+<input type="radio" name="q9" value="errado">
+Fonte primária.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 10 -->
+
+<div class="pergunta">
+
+<h3>
+10. Uma imagem gerada por IA é apresentada como fotografia real. O ponto central é verificar:
+</h3>
+
+<label>
+<input type="radio" name="q10" value="errado">
+Quantidade de curtidas.
+</label>
+
+<label>
+<input type="radio" name="q10" value="certo">
+Origem e contexto.
+</label>
+
+<label>
+<input type="radio" name="q10" value="errado">
+Tamanho do arquivo.
+</label>
+
+<label>
+<input type="radio" name="q10" value="errado">
+Número de comentários.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 11 -->
+
+<div class="pergunta">
+
+<h3>
+11. Duas fontes confiáveis divergem sobre um fato. O procedimento adequado é:
+</h3>
+
+<label>
+<input type="radio" name="q11" value="errado">
+Escolher a mais compartilhada.
+</label>
+
+<label>
+<input type="radio" name="q11" value="certo">
+Comparar evidências e fontes.
+</label>
+
+<label>
+<input type="radio" name="q11" value="errado">
+Escolher a que concorda com você.
+</label>
+
+<label>
+<input type="radio" name="q11" value="errado">
+Descartar as duas.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 12 -->
+
+<div class="pergunta">
+
+<h3>
+12. Uma publicação usa "especialistas dizem", mas não identifica nenhum. Isso:
+</h3>
+
+<label>
+<input type="radio" name="q12" value="errado">
+Prova a afirmação.
+</label>
+
+<label>
+<input type="radio" name="q12" value="certo">
+Exige verificação da fonte.
+</label>
+
+<label>
+<input type="radio" name="q12" value="errado">
+Torna o texto satírico.
+</label>
+
+<label>
+<input type="radio" name="q12" value="errado">
+Confirma a pesquisa.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 13 -->
+
+<div class="pergunta">
+
+<h3>
+13. Qual elemento ajuda a detectar uma notícia antiga reapresentada como atual?
+</h3>
+
+<label>
+<input type="radio" name="q13" value="certo">
+Data da publicação.
+</label>
+
+<label>
+<input type="radio" name="q13" value="errado">
+Quantidade de emojis.
+</label>
+
+<label>
+<input type="radio" name="q13" value="errado">
+Número de imagens.
+</label>
+
+<label>
+<input type="radio" name="q13" value="errado">
+Tamanho da manchete.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 14 -->
+
+<div class="pergunta">
+
+<h3>
+14. Uma afirmação extraordinária não apresenta evidências verificáveis. A atitude mais adequada é:
+</h3>
+
+<label>
+<input type="radio" name="q14" value="errado">
+Compartilhar rapidamente.
+</label>
+
+<label>
+<input type="radio" name="q14" value="errado">
+Tratá-la como confirmada.
+</label>
+
+<label>
+<input type="radio" name="q14" value="certo">
+Buscar evidências independentes.
+</label>
+
+<label>
+<input type="radio" name="q14" value="errado">
+Confiar na popularidade.
+</label>
+
+</div>
+
+
+<!-- PERGUNTA 15 -->
+
+<div class="pergunta">
+
+<h3>
+15. Qual combinação representa uma checagem mais completa?
+</h3>
+
+<label>
+<input type="radio" name="q15" value="errado">
+Título + curtidas.
+</label>
+
+<label>
+<input type="radio" name="q15" value="certo">
+Fonte + data + contexto + evidências.
+</label>
+
+<label>
+<input type="radio" name="q15" value="errado">
+Imagem + comentários.
+</label>
+
+<label>
+<input type="radio" name="q15" value="errado">
+Opinião + compartilhamentos.
+</label>
+
+</div>
+
+
+<button type="submit">
+Ver Resultado
+</button>
+
+</form>
+
+
+<div id="resultado"></div>
+
+<a href="index.html" class="voltar">
+⬅ Voltar ao início
+</a>
+
+</div>
+
+
+<!-- SUPABASE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const SUPABASE_URL =
+"https://joajolboddinnajxrnop.supabase.co";
+
+const SUPABASE_KEY =
+"sb_publishable_EEaShgemq6o_yjfZSnwCJA_9gV1OJyc";
+
+const clienteSupabase =
+window.supabase.createClient(
+SUPABASE_URL,
+SUPABASE_KEY
+);
+
+
+// Verifica se a pessoa está logada
+
+async function verificarLogin(){
+
+const { data: { session } } =
+await clienteSupabase.auth.getSession();
+
+if(!session){
+
+window.location.href =
+"login.html?origem=quiz";
+
+}
+
+}
+
+verificarLogin();
+
+</script>
+
+
+<!-- RESULTADO E SALVAMENTO -->
+
+<script>
+
+document
+.getElementById("quizForm")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const totalPerguntas = 15;
+
+const respostas =
+document.querySelectorAll(
+'input[type="radio"]:checked'
+);
+
+
+if(respostas.length < totalPerguntas){
+
+document.getElementById("resultado").innerHTML = `
+<div>⚠️ Responda todas as perguntas antes de finalizar.</div>
+`;
+
+return;
+
+}
+
+
+const { data: { user }, error: erroUsuario } =
+await clienteSupabase.auth.getUser();
+
+
+if(erroUsuario || !user){
+
+document.getElementById("resultado").innerHTML = `
+<div>⚠️ Você precisa estar logado.</div>
+`;
+
+return;
+
+}
+
+
+let pontos = 0;
+
+const respostasParaSalvar = [];
+
+
+respostas.forEach((resposta) => {
+
+const perguntaId =
+Number(resposta.name.replace("q", ""));
+
+const acertou =
+resposta.value === "certo";
+
+
+if(acertou){
+
+pontos++;
+
+}
+
+
+respostasParaSalvar.push({
+
+user_id: user.id,
+
+pergunta_id: perguntaId,
+
+resposta: resposta.value,
+
+acertou: acertou
+
+});
+
+});
+
+
+const { error } =
+await clienteSupabase
+.from("respostas")
+.insert(respostasParaSalvar);
+
+
+if(error){
+
+console.error("Erro ao salvar:", error);
+
+document.getElementById("resultado").innerHTML = `
+<div>❌ Erro ao salvar suas respostas.</div>
+`;
+
+return;
+
+}
+
+
+const erros =
+totalPerguntas - pontos;
+
+
+const percentual =
+Math.round(
+(pontos / totalPerguntas) * 100
+);
+
+
+document.getElementById("resultado").innerHTML = `
+
+<div>✅ Acertos: ${pontos}</div>
+
+<div>❌ Erros: ${erros}</div>
+
+<div>📊 Aproveitamento: ${percentual}%</div>
+
+`;
+
+});
+
+</script>
+
+</body>
+
+</html>
